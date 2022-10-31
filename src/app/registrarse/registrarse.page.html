@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <ion-label>Usuario</ion-label>
+    <ion-input placeholder="Digite nuevo usuario" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Contraseña</ion-label>
+    <ion-input placeholder="Digite la contraseña" type="password"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Verificar Contraseña</ion-label>
+    <ion-input type="password"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Fecha de Nacimiento</ion-label>
+    <ion-datetime value="2000-01-01" placeholder="Seleccione fecha"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Imagen de Perfil</ion-label>
+    <ion-avatar (click) = "tomarFoto()">
+      <img [src]="imagenUsuario" *ngIf="!foto" >
+      <img [src]="foto" *ngIf="foto" >
+    </ion-avatar>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Latitud</ion-label>
+    <ion-input [(ngModel)]= "latitud"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Longitud</ion-label>
+    <ion-input [(ngModel)]= "longitud"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full">
+    <ion-icon slot="start" name="person-add"></ion-icon>
+      Registrarse
+  </ion-button>
+
+  <ion-button expand="full" [routerLink]="['/inicial']">
+    <ion-icon slot="start" name="arrow-back-circle"></ion-icon>
+      Cancelar
+  </ion-button>
+
+</ion-content>

@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar color="mycolor">
+    <ion-title>Filtrar Inmuebles</ion-title>
+  </ion-toolbar>
+
+  <ion-toolbar color="mycolor">
+    <ion-searchbar placeholder="Buscar" animated (ionChange)="searchCustomer($event)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  
+  <ion-list *ngIf="permission">
+    <ion-item *ngFor="let user of searchedUser">
+      <ion-avatar slot="start">
+        <img src="../../assets/img-customers/{{user.image}}">
+      </ion-avatar>
+      <ion-avatar slot="end">
+        <ion-icon name="search-outline"></ion-icon>
+      </ion-avatar>
+      <ion-label>
+        <h2 class="colorBlue">{{user.name}}</h2>
+        <p>{{user.description}}</p>
+      </ion-label>
+    </ion-item>   
+  </ion-list>
+
+  
+
+  <ion-label *ngIf="!permission">No tienes permisos para filtrar las publicaciones recientes</ion-label>
+
+</ion-content>
+<ion-button [routerLink]="['/home']" class="fancyButton" style="position: bottom; left: 0;">Regresar
+        
+</ion-button>
+
+<ion-button [routerLink]="['/googlemaps']" class="fancyButton" style="position: bottom; left: 0;">Google Maps
+        
+</ion-button>
+
+
+

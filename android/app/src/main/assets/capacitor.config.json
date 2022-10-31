@@ -1,0 +1,13 @@
+{
+  "appId": "org.uluisamigo.ejemplogui",
+  "appName": "ejemplogui",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}

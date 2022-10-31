@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Bienvenido
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+    <ion-card>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/1200px-User_icon_2.svg.png" />
+      <ion-card-header>
+        <ion-card-subtitle>Bienvenido a tu perfil</ion-card-subtitle>
+        <ion-card-title>(Nombre de Usuario)</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Aqui podras encontrar todos los elementos relacionados a tu perfil
+      </ion-card-content>
+      
+        <ion-toolbar position="bottom" class="fancyButton_Toolbar">
+          <ion-button [routerLink]="['/inicial']" class="fancyButton" style="position: bottom; left: 0;" size="small">Desconectarse 
+          </ion-button>
+            <ion-button [routerLink]="['/amigos']" class="fancyButton" style="position: bottom; right: 0;" size="small">Lista de Amigos
+            </ion-button>
+            <ion-button [routerLink]="['/buscar']" class="fancyButton" style="position: bottom; right: 0;" size="small">Buscar Inmueble
+            </ion-button>
+    
+        </ion-toolbar>
+    </ion-card>
+  
+  <ion-list>
+    <ion-list-header>
+      Ultimas notificaciones
+    </ion-list-header>
+
+    <ion-item *ngFor="let notificacion of notificacionesAMostrar" [routerLink]="['/detallenotificacion', notificacion.id]">
+      <ion-avatar slot="start">
+        <img src="{{notificacion.imagen}}">
+      </ion-avatar>
+      <ion-label>
+        <h3>{{notificacion.titulo}}</h3>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

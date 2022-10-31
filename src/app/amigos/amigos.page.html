@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista de Amigos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+
+    <ion-list>
+      <ion-list-header>
+        Mensajes Recientes
+      </ion-list-header>
+
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="assets/perfil1.png">
+        </ion-avatar>
+        <ion-label>
+          <h2>John</h2>
+          <h3>Evento</h3>
+          <p>Recuerda presentarte de manera elegante.</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="assets/perfil1.png">
+        </ion-avatar>
+        <ion-label>
+          <h2>Pedro</h2>
+          <h3>Trabajo</h3>
+          <p>No olvides enviarnos el proyecto para el martes.</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
+    <ion-toolbar position="bottom" class="fancyButton_Toolbar">
+      <ion-button [routerLink]="['/home']" class="fancyButton" style="position: bottom; left: 0;">Regresar
+      
+      </ion-button>
+
+    </ion-toolbar>
+</ion-content>

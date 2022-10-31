@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{detalleNotificacion?.titulo}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img src="{{detalleNotificacion?.imagen}}">
+  <p>
+    {{detalleNotificacion?.detalle}}
+  </p>
+
+</ion-content>
+
+<ion-button [routerLink]="['/home']" class="fancyButton" style="position: bottom; left: 0;">Regresar
+      
+</ion-button>

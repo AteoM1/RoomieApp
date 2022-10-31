@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Configuración de la aplicacion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label>Activar Tema Oscuro</ion-label>
+      <ion-toggle (ionChange)="cambiarTema($event)" checked="{{toggleActivo}}"></ion-toggle>
+    </ion-item>
+
+   
+  </ion-list>
+
+  <ion-button [routerLink]="['/inicial']" class="fancyButton" style="position: bottom; left: 0;" size="small">Regresar 
+  </ion-button>
+
+</ion-content>

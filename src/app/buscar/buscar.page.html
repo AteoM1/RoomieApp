@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Publicaciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content >
+  
+
+    <ion-list>
+      <ion-list-header>
+        Publicaciones recientes de inmuebles
+      </ion-list-header>
+
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="assets/perfil1.png">
+        </ion-avatar>
+        <ion-label>
+          <h2>Juan</h2>
+          <h3>Publicación reciente</h3>
+        </ion-label>
+      </ion-item>
+      
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="assets/perfil1.png">
+        </ion-avatar>
+        <ion-label>
+          <h2>Rosa</h2>
+          <h3>Publicación reciente</h3>
+        </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="assets/perfil1.png">
+        </ion-avatar>
+        <ion-label>
+          <h2>Santiago</h2>
+          <h3>Publicación reciente</h3>
+        </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="assets/perfil1.png">
+        </ion-avatar>
+        <ion-label>
+          <h2>Johana</h2>
+          <h3>Publicación reciente</h3>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
+    <ion-toolbar position="bottom" class="fancyButton_Toolbar">
+      <ion-button [routerLink]="['/home']" class="fancyButton" style="position: bottom; left: 0;">Regresar
+        
+      </ion-button>
+      <ion-button [routerLink]="['/customers']" class="fancyButton" style="position: bottom; right: 3;">Filtrar inmueble
+
+      </ion-button>
+
+    </ion-toolbar>
+</ion-content>
+
+
+<ion-toolbar>
+  <ion-buttons slot="secondary">
+    <ion-button fill="solid">
+      <ion-icon slot="start" name="person-circle"></ion-icon>
+      Contacto
+    </ion-button>
+  </ion-buttons>
+  <ion-title></ion-title>
+  <ion-buttons slot="primary">
+    <ion-button fill="solid" color="secondary">
+      Ayuda
+      <ion-icon slot="end" name="help-circle"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>
+

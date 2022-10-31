@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      RoomieApp
+    </ion-title>
+  </ion-toolbar>
+
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div id="container">
+
+   <ion-button expand="block" color="secondary" [routerLink]="['/iniciarsesion']">Iniciar Sesión</ion-button>
+
+   <ion-button expand="block" color="medium" [routerLink]="['/registrarse']">Registrarse</ion-button>
+
+   
+
+</div>
+
+<ion-button [routerLink]="['/configuraciones']" class="fancyButton" style="position: absolute; bottom: 0;">Configurar</ion-button>
+
+</ion-content>
